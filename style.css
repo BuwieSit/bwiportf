@@ -17,7 +17,7 @@ body {
 :root {
     --bgcolor: #232323;
     --secondary: #1D1D1D;
-    --elemcolor: #B1B1B1;
+    --elemcolor: #ffffff;
     --headercolor: #64656A;
 
     --titlefont: "Bebas Neue", sans-serif;
@@ -37,14 +37,174 @@ header {
 }
 
 .title-cont {
-    width: 10%;
+    width: auto;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: start;
+    gap: 10px;
     padding: 0 2%;
+    position: relative;
+}
+.title-cont > img {
+    width: 30px
 }
 #title {
     font-family: var(--titlefont);
-    font-size: clamp(0.5rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+
+.navlist, .lower-navlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    padding: 0 2%;
+    height: 100%;
+}
+
+.nav-item, .lower-navitem {
+    text-decoration: none;
+    height: 100%;
+    
+}
+.nav-item > li, .lower-navitem > li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: var(--textfont);
+    font-size: clamp(0.5rem, 0.8vw, 1.5rem);
+}
+
+.nav-item > li > img {
+    width: 30px;
+}
+
+.lower-header {
+    width: 100%;
+    height: 40px;
+    background-color: var(--secondary);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    color: var(--elemcolor);
+}
+
+.lower-navlist {
+    padding: 0 5% !important;
+    font-weight: 700;
+}
+.lower-navitem > li > img {
+    width: 20px;
+}
+
+.parent {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-right: 1px solid white;
+    padding: 1% 0;
+}
+.left-top-wrapper {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.left-sections {
+    width: 80%;
+    height: auto;
+    padding: 1% 0;
+    font-family: var(--textfont);
+    font-size: clamp(0.5rem, 0.8vw, 1.2rem);
+    color: white;
+}
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    border-bottom: 1px solid white;
+
+}
+
+.panel-parent {
+    background-color: var(--secondary);
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    padding: 1% 1%;
+}
+.panel-table {
+    width: 100%;
+    height: 100%;
+}
+.panel-table > tbody {
+    width: 100%;
+    height: 100%;  
+    padding: 0 2%;
+}
+.panel-table > tbody > tr {
+    width: 100%;
+    height: 10%;
+}
+.panel-table > tbody > tr > td {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.square {
+    width: 20px;
+    aspect-ratio: 1;
+    background-color: orange;
+    border: 1px solid black;
+}
+
+#downIcon {
+    transform: rotateZ(-90deg);
+    filter: invert();
+    width: 20px;
+}
+#folderIcon {
+    width: 20px;
+}
+.icon-img {
+    width: 10px;
+
+}
+.controls {
+
+}
+
+
+.right {
+    width: 70%;
+    height: auto;
+
+
 }
