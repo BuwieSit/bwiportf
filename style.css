@@ -69,6 +69,7 @@ header {
 .nav-item, .lower-navitem {
     text-decoration: none;
     height: 100%;
+    color: var(--elemcolor);
     
 }
 .nav-item > li, .lower-navitem > li {
