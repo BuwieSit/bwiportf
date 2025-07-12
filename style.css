@@ -33,6 +33,7 @@ header {
     flex-direction: row;
     align-items: start;
     justify-content: start;
+    gap: 30px;
     color: var(--elemcolor);
 }
 
@@ -64,13 +65,20 @@ header {
     width: auto;
     padding: 0 2%;
     height: 100%;
+
 }
 
 .nav-item, .lower-navitem {
     text-decoration: none;
     height: 100%;
     color: var(--elemcolor);
-    
+    transition: all 0.3s ease;
+    padding: 0 2%;
+}
+.nav-item {
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 .nav-item > li, .lower-navitem > li {
     height: 100%;
@@ -81,10 +89,17 @@ header {
     cursor: pointer;
     font-family: var(--textfont);
     font-size: clamp(0.5rem, 0.8vw, 1.5rem);
+
 }
 
 .nav-item > li > img {
     width: 30px;
+}
+.nav-item:hover {
+    background-color: #1D1D1D;
+}
+.lower-navitem:hover {
+    background-color: #64656A;
 }
 
 .lower-header {
@@ -150,7 +165,10 @@ header {
     justify-content: center;
     font-weight: 700;
     border-bottom: 1px solid white;
-
+}
+.category-rows:hover {
+    cursor: pointer;
+    background-color:#575757;
 }
 
 .panel-parent {
@@ -240,10 +258,24 @@ header {
     justify-content: flex-start;
     gap: 15px;
 }
+.control-name > li {
+    cursor: pointer;
+}
+.control-name > li:hover {
+    text-decoration: underline;
+}
 
 
 .right {
     width: 70%;
     height: auto;
 
+}
+
+footer {
+    margin-top: 10%;
+    background-color: #111111;
+    width: 100%;
+    height: auto;
+    padding: 3% 0;
 }
