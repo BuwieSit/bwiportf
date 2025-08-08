@@ -279,3 +279,36 @@ footer {
     height: auto;
     padding: 3% 0;
 }
+
+
+.category-dropdown {
+    width: 80% !important;
+    height: auto;
+    padding: 1% 0;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.category-droplist {
+    color: white;
+    width: 70%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.category-droplist > li {
+    list-style-type: none;
+}
+.category-droplist > li::before {
+    content: '';
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-size: 10px;
+    background-image: url("./resources/down.png");
+    transform: rotateZ(-90deg);
+    background-repeat: no-repeat;
+    filter: invert();
+    margin-right: 5px;
+}
