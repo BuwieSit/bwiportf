@@ -12,6 +12,8 @@ body {
     border: 0;
     padding: 0; 
     background-color: var(--bgcolor);
+    height: 100vh;
+    overflow: hidden;
 }
 
 :root {
@@ -214,6 +216,7 @@ header {
 }
 
 #downIcon {
+    transition: all 0.2s;
     transform: rotateZ(-90deg);
     filter: invert();
     width: 10px;
@@ -268,9 +271,47 @@ header {
 .right {
     width: 70%;
     height: auto;
-
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+    font-family: var(--textfont);
+    color: white;
 }
 
+/* HERO SECTION */
+
+.hero-profile {
+    width: 90%;
+    padding: 5% 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+}
+.hero-img-cont {
+    border-radius: 50%;
+    width: 50%;
+    min-width: 200px;
+    max-width: 250px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-img {
+    width: 100%;
+}
+.hero-intro {
+    max-width: 50%;
+    text-align: justify;
+    letter-spacing: 1px;
+}
 footer {
     margin-top: 10%;
     background-color: #111111;
@@ -325,3 +366,6 @@ footer {
 .category-droplist > li:hover {
     background-color:#575757;
 }
+
+
+
