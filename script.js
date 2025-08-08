@@ -66,3 +66,21 @@ if (initialContent === 'home') {
 } else if (contentMap[initialContent]) {
     loadContent(initialContent, false);
 }
+
+const rows = document.querySelectorAll('.category-rows');
+
+rows.forEach(r => {
+    r.addEventListener('click', () => {
+        const dropdown = r.nextElementSibling; 
+
+        if (dropdown && dropdown.classList.contains('category-dropdown')) {
+            if (dropdown.style.maxHeight === '0px' || dropdown.style.maxHeight === '') {
+                dropdown.style.maxHeight = '100px';
+                dropdown.style.padding = '1% 0';
+            } else {
+                dropdown.style.maxHeight = '0px';
+                dropdown.style.padding = '0';
+            }
+        }
+    });
+});

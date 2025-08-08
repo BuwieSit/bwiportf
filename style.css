@@ -165,6 +165,7 @@ header {
     justify-content: center;
     font-weight: 700;
     border-bottom: 1px solid white;
+    transition: all 0.3s ease;
 }
 .category-rows:hover {
     cursor: pointer;
@@ -238,16 +239,14 @@ header {
     width: 20px;
     aspect-ratio: 1;
     object-fit: cover;
-    filter: invert();
+
 }
 .display {
     height: 100%;
+    gap: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.control {
-
 }
 
 .control-name {
@@ -280,25 +279,36 @@ footer {
     padding: 3% 0;
 }
 
+/* #home:hover ~ .category-dropdown {
+    max-height: 100px;
+    padding: 1% 0;
+} */
 
 .category-dropdown {
+    position: relative !important;
     width: 80% !important;
-    height: auto;
-    padding: 1% 0;
+    overflow: hidden !important;
+    max-height: 0px;
+    box-sizing: border-box;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    transition: all 0.3s ease;
 }
 .category-droplist {
     color: white;
     width: 70%;
-    overflow: hidden;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 .category-droplist > li {
     list-style-type: none;
+    cursor: pointer;
+    height: 100%;
+    padding: 3% 0;
+    
 }
 .category-droplist > li::before {
     content: '';
@@ -311,4 +321,7 @@ footer {
     background-repeat: no-repeat;
     filter: invert();
     margin-right: 5px;
+}
+.category-droplist > li:hover {
+    background-color:#575757;
 }
